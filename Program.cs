@@ -64,3 +64,63 @@ while(current <= N)
     current += 2;
 }
 */
+
+// ДЗ 2
+// Задача 1. Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+/*
+Console.Write("Input a three-digit number ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int CutNumber(int number)
+{
+    number = number % 100 / 10;
+    return number;
+}
+
+int result = CutNumber(number);
+Console.WriteLine(result);
+*/
+
+// Задача 2. Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+/*
+Console.Write("Input a number ");
+int Number = Convert.ToInt32(Console.ReadLine());
+
+if(Number < 100) 
+    Console.WriteLine("There is no third number!");
+
+else
+{
+    int CutNumber = Number;
+    while(CutNumber > 999)
+    {
+        CutNumber = CutNumber / 10;
+    }
+    int Result = CutNumber % 10;
+    Console.WriteLine(Result);
+}
+*/
+
+// Задача 3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+/*
+Console.WriteLine("Input a number from 1 to 7 ");
+int Day = Convert.ToInt32(Console.ReadLine());
+
+bool IsHol(int Day)
+{
+    if(Day < 6)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+bool res = IsHol(Day);
+Console.WriteLine(res);
+*/
