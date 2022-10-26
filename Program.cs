@@ -124,3 +124,75 @@ bool IsHol(int Day)
 bool res = IsHol(Day);
 Console.WriteLine(res);
 */
+
+
+// ДЗ 3
+// Задача 1. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+/*
+void PalinCheck(int Number)
+{
+    if(Number > 10000 && Number < 100000)
+    {
+        int FirstNum = Number / 10000;
+        int FifthNum = Number % 10;
+        int SecondNum = Number / 1000 % 10;
+        int FourthNum = Number / 10 % 10;
+        if(FirstNum == FifthNum && SecondNum == FourthNum)
+            Console.WriteLine("Yes!");
+        else
+            Console.WriteLine("No!");
+    }
+    else
+    {
+        Console.WriteLine("Input a correct number!");
+    }
+} 
+
+Console.Write("Input a five-digit number ");
+int UserNum = Convert.ToInt32(Console.ReadLine());
+
+PalinCheck(UserNum);
+*/
+
+// Задача 2. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+/*
+Console.Write("Input the first X coordinates ");
+int X1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the second X coordinates ");
+int X2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the first y coordinates ");
+int Y1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the second y coordinates ");
+int Y2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the first z coordinates ");
+int Z1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the second z coordinates ");
+int Z2 = Convert.ToInt32(Console.ReadLine());
+
+double distance = Math.Sqrt(Math.Pow(X2 - X1, 2) + Math.Pow(Y2 - Y1, 2) + Math.Pow(Z2 - Z1, 2));
+double result = Math.Round(distance, 3);
+Console.Write($"Distance between dots equal {result}");
+*/
+
+// Задача 3. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+/*
+Console.Write("Input a positive number ");
+
+void Row(double number)
+{
+    int index = 1;
+    while(index <= number)
+    {
+        double cube = Math.Pow(index, 3);
+        Console.Write(cube + " ");
+        index ++; 
+    }
+}
+
+double CubeNum = Convert.ToDouble(Console.ReadLine());
+
+Row(CubeNum);
+*/
