@@ -196,3 +196,127 @@ double CubeNum = Convert.ToDouble(Console.ReadLine());
 
 Row(CubeNum);
 */
+
+
+// ДЗ 4
+
+// Задача 1. Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+/*
+int Exponent(int A, int B)
+{
+    int result = 1;
+    for(int i=1; i <= B; i++)
+    {
+        result *= A;
+    }
+    return result;
+}
+
+Console.Write("Input the number A: ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число B: ");
+int B = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"The answer is {Exponent(A, B)}");
+*/
+
+
+// Задача 2. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+/*
+int TotalSum(int Number)
+{
+    int CutNumber = Number;
+    int Sum = 0;
+    while(CutNumber >= 10)
+    {
+        Sum += CutNumber % 10;
+        CutNumber /= 10;
+    }
+    Sum += CutNumber;
+    return Sum;
+
+}
+
+Console.Write("Input not a single-digit number: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Sum of numbers in number {a} is {TotalSum(a)}");
+*/
+
+
+// Задача 3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+/*
+Console.Write("Input numbers separated by comma: ");
+string RawOfNumbers = Console.ReadLine();
+
+RawOfNumbers += ",";
+
+string RemovingSpaces (string Series)
+{
+    string SeriesNew = "";
+    for (int i = 0; i < Series.Length; i++)
+    {
+    if (Series[i] != ' ')
+        {
+            SeriesNew += Series[i];
+        }
+    }
+    return SeriesNew;
+}
+
+int[] ArrayOfNumbers(string RawNew)
+{ 
+    int[] arrayOfNumbers = new int[1];
+    
+    int j =0;
+    
+    for (int i = 0; i < RawNew.Length; i++)
+    {
+        string seriesNew1 = "";
+        while (RawNew[i] != ',' && i < RawNew.Length)
+        {
+            seriesNew1 += RawNew[i];
+            i++;
+        }
+    arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);
+    if (i < RawNew.Length-1)
+    {
+      arrayOfNumbers = arrayOfNumbers.Concat(new int[] {0}).ToArray();
+    }
+    j++;
+    }
+return arrayOfNumbers;
+}
+
+
+void PrintArry(int[] coll)
+{
+    int count = coll.Length;
+    int index = 0;
+    Console.Write("[");
+    while(index < count)
+    {
+        Console.Write(coll[index]);
+        index++;
+        if (index < count)
+        {
+            Console.Write(", ");
+        }
+    }
+Console.Write("]");
+} 
+
+
+string seriesNew = RemovingSpaces(RawOfNumbers);
+
+int[] arrayOfNumbers =  ArrayOfNumbers(seriesNew);
+
+PrintArry(arrayOfNumbers);
+*/
+
+
+
+
