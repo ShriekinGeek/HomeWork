@@ -317,6 +317,120 @@ int[] arrayOfNumbers =  ArrayOfNumbers(seriesNew);
 PrintArry(arrayOfNumbers);
 */
 
+// ДЗ 5
+// Задача 1. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+/*
+Console.WriteLine("Input a massive size: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
+int count = 0;
+
+for (int a = 0; a < numbers.Length; a++)
+if (numbers[a] % 2 == 0)
+count++;
+
+Console.WriteLine(count);
+
+void FillArrayRandomNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = new Random().Next(100,1000);
+    }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+*/
+
+// Задача 2. Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+/*
+Console.WriteLine("Input a massive size: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
+int sum = 0;
+
+for (int a = 1; a < numbers.Length; a+=2)
+    sum += numbers[a];
+
+Console.WriteLine(sum);
+
+void FillArrayRandomNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = new Random().Next(-10,100);
+        }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
+*/
+
+// Задача 3. Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+/*
+Console.WriteLine("Input a massive size");
+int size = Convert.ToInt32(Console.ReadLine());
+double[] numbers = new double[size];
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
+double min = 1000;
+double max = 0;
+
+for (int a = 0; a < numbers.Length; a++)
+{
+    if (numbers[a] > max)
+        {
+            max = numbers[a];
+        }
+    if (numbers[a] < min)
+        {
+            min = numbers[a];
+        }
+}
+
+Console.WriteLine(max - min);
+
+void FillArrayRandomNumbers(double[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
+        }
+}
+void PrintArray(double[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
+*/
+
 
 
 
